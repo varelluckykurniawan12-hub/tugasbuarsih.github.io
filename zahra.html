@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV Zahra Fitria Ramdhani</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #fff5f8;
+            color: #3d2931;
+            line-height: 1.6;
+        }
+
+        /* NAVBAR */
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.92);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid #f3cbd8;
+            padding: 16px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #d94f7d;
+        }
+
+        .logo span {
+            color: #8f4a63;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #4b303a;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #d94f7d;
+        }
+
+        /* HERO */
+        .hero {
+            min-height: 90vh;
+            padding: 70px 8%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background:
+                radial-gradient(circle at top right, #ffd6e3, transparent 35%),
+                radial-gradient(circle at bottom left, #ffe5ee, transparent 35%),
+                #fff5f8;
+        }
+
+        .hero-content {
+            max-width: 1100px;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 60px;
+        }
+
+        .hero-text {
+            flex: 1;
+        }
+
+        .badge {
+            display: inline-block;
+            background: #ffe0e9;
+            color: #c63f6c;
+            padding: 8px 16px;
+            border-radius: 30px;
+            font-size: 14px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 {
+            font-size: clamp(40px, 6vw, 70px);
+            line-height: 1.1;
+            color: #402832;
+            margin-bottom: 15px;
+        }
+
+        .hero h1 span {
+            color: #d94f7d;
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: #765763;
+            max-width: 600px;
+            margin-bottom: 25px;
+        }
+
+        .motto {
+            font-style: italic;
+            color: #c63f6c;
+            font-weight: bold;
+            border-left: 4px solid #d94f7d;
+            padding-left: 15px;
+            margin-bottom: 30px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 13px 25px;
+            background: #d94f7d;
+            color: white;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+            box-shadow: 0 8px 20px rgba(217, 79, 125, 0.25);
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            background: #bd3d68;
+        }
+
+        /* FOTO */
+        .photo-box {
+            flex: 0 0 330px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .photo-frame {
+            width: 300px;
+            height: 300px;
+            padding: 8px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #d94f7d, #f5a9bf);
+            box-shadow: 0 20px 45px rgba(135, 62, 87, 0.25);
+        }
+
+        .profile-photo {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 6px solid white;
+        }
+
+        /* SECTION */
+        section {
+            padding: 80px 8%;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 45px;
+        }
+
+        .section-title h2 {
+            font-size: 36px;
+            color: #402832;
+            margin-bottom: 8px;
+        }
+
+        .section-title p {
+            color: #8a6571;
+        }
+
+        /* CARD */
+        .cards {
+            max-width: 1100px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .card {
+            background: white;
+            padding: 30px;
+            border-radius: 20px;
+            border: 1px solid #f3d3dd;
+            box-shadow: 0 10px 30px rgba(115, 57, 77, 0.08);
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 18px 35px rgba(115, 57, 77, 0.14);
+        }
+
+        .card-icon {
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #ffe3eb;
+            border-radius: 15px;
+            font-size: 25px;
+            margin-bottom: 20px;
+        }
+
+        .card h3 {
+            color: #c63f6c;
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            color: #765763;
+        }
+
+        /* TENTANG */
+        .about {
+            background: white;
+        }
+
+        .about-content {
+            max-width: 1000px;
+            margin: auto;
+            text-align: center;
+        }
+
+        .about-content p {
+            font-size: 17px;
+            color: #765763;
+        }
+
+        /* DATA DIRI */
+        .data-grid {
+            max-width: 900px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 18px;
+        }
+
+        .data-item {
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+            border-left: 5px solid #d94f7d;
+            box-shadow: 0 8px 20px rgba(115, 57, 77, 0.07);
+        }
+
+        .data-item strong {
+            display: block;
+            color: #c63f6c;
+            margin-bottom: 5px;
+        }
+
+        .data-item span {
+            color: #765763;
+        }
+
+        /* PENGALAMAN */
+        .experience {
+            max-width: 900px;
+            margin: auto;
+        }
+
+        .experience-item {
+            background: white;
+            padding: 25px;
+            margin-bottom: 20px;
+            border-radius: 18px;
+            border-left: 5px solid #d94f7d;
+            box-shadow: 0 8px 25px rgba(115, 57, 77, 0.08);
+        }
+
+        .experience-item h3 {
+            color: #c63f6c;
+            margin-bottom: 8px;
+        }
+
+        .experience-item p {
+            color: #765763;
+        }
+
+        /* PRESTASI */
+        .achievement {
+            text-align: center;
+            background: linear-gradient(135deg, #ffe5ed, #fff5f8);
+        }
+
+        .achievement-box {
+            max-width: 800px;
+            margin: auto;
+            background: white;
+            padding: 40px;
+            border-radius: 25px;
+            box-shadow: 0 15px 35px rgba(115, 57, 77, 0.1);
+        }
+
+        .ranking {
+            font-size: 60px;
+            font-weight: bold;
+            color: #d94f7d;
+            margin-bottom: 10px;
+        }
+
+        .achievement-box h3 {
+            color: #402832;
+            margin-bottom: 10px;
+        }
+
+        .achievement-box p {
+            color: #765763;
+        }
+
+        /* FOOTER */
+        footer {
+            background: #402832;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+        footer span {
+            color: #f39ab5;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 850px) {
+
+            nav {
+                padding: 15px 5%;
+            }
+
+            nav ul {
+                display: none;
+            }
+
+            .hero {
+                padding: 60px 6%;
+            }
+
+            .hero-content {
+                flex-direction: column-reverse;
+                text-align: center;
+            }
+
+            .hero p {
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .motto {
+                border-left: none;
+                border-bottom: 3px solid #d94f7d;
+                padding-bottom: 10px;
+            }
+
+            .cards {
+                grid-template-columns: 1fr;
+            }
+
+            .data-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .photo-frame {
+                width: 230px;
+                height: 230px;
+            }
+
+            section {
+                padding: 60px 6%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav>
+        <div class="logo">Zahra<span>.</span></div>
+
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#tentang">Tentang</a></li>
+            <li><a href="#data">Data Diri</a></li>
+            <li><a href="#pengalaman">Pengalaman</a></li>
+            <li><a href="#prestasi">Prestasi</a></li>
+        </ul>
+    </nav>
+
+
+    <!-- HERO -->
+    <section class="hero" id="home">
+
+        <div class="hero-content">
+
+            <div class="hero-text">
+
+                <div class="badge">🐷 Personal CV • TKJ Student</div>
+
+                <h1>
+                    Zahra Fitria<br>
+                    <span>Ramdhani</span>
+                </h1>
+
+                <p>
+                    Pelajar SMK Bina Mandiri Multimedia
+                    jurusan Teknik Komputer dan Jaringan
+                    yang memiliki semangat belajar dan
+                    konsisten dalam mengembangkan kemampuan.
+                </p>
+
+                <div class="motto">
+                    "Belum tahu kalau belum coba."
+                </div>
+
+                <a href="#tentang" class="btn">
+                    Lihat Profil ↓
+                </a>
+
+            </div>
+
+            <div class="photo-box">
+                <div class="photo-frame">
+
+                    <!-- GANTI FOTO DI SINI -->
+                    <img
+                        src="fitria.jpg"
+                        alt="Foto Zahra Fitria Ramdhani"
+                        class="profile-photo"
+                    >
+
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- TENTANG -->
+    <section class="about" id="tentang">
+
+        <div class="section-title">
+            <h2>Tentang Saya</h2>
+            <p>Profil singkat Zahra</p>
+        </div>
+
+        <div class="about-content">
+
+            <p>
+                Saya adalah Zahra Fitria Ramdhani, seorang pelajar
+                berusia 17 tahun di SMK Bina Mandiri Multimedia.
+                Saya mengambil jurusan Teknik Komputer dan Jaringan
+                karena tertarik dengan dunia komputer, jaringan,
+                dan teknologi informasi.
+            </p>
+
+            <br>
+
+            <p>
+                Saya memiliki semangat untuk terus belajar,
+                mencoba hal baru, serta mengembangkan kemampuan
+                akademik maupun keterampilan di bidang teknologi.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- DATA DIRI -->
+    <section id="data">
+
+        <div class="section-title">
+            <h2>Data Diri</h2>
+            <p>Informasi pribadi dan pendidikan</p>
+        </div>
+
+        <div class="data-grid">
+
+            <div class="data-item">
+                <strong>Nama</strong>
+                <span>Zahra Fitria Ramdhani</span>
+            </div>
+
+            <div class="data-item">
+                <strong>Umur</strong>
+                <span>17 Tahun</span>
+            </div>
+
+            <div class="data-item">
+                <strong>Sekolah</strong>
+                <span>SMK Bina Mandiri Multimedia</span>
+            </div>
+
+            <div class="data-item">
+                <strong>Jurusan</strong>
+                <span>Teknik Komputer dan Jaringan</span>
+            </div>
+
+            <div class="data-item">
+                <strong>Status</strong>
+                <span>Pelajar</span>
+            </div>
+
+            <div class="data-item">
+                <strong>Bidang</strong>
+                <span>Komputer & Jaringan</span>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- PENGALAMAN -->
+    <section class="about" id="pengalaman">
+
+        <div class="section-title">
+            <h2>Pengalaman</h2>
+            <p>Kegiatan dan program yang pernah diikuti</p>
+        </div>
+
+        <div class="experience">
+
+            <div class="experience-item">
+                <h3>💻 Class Program Axio</h3>
+                <p>
+                    Mengikuti Class Program Axio sebagai bagian dari
+                    pengembangan wawasan dan keterampilan di bidang
+                    teknologi komputer.
+                </p>
+            </div>
+
+            <div class="experience-item">
+                <h3>📚 Kelas Tambahan</h3>
+                <p>
+                    Mengikuti kelas tambahan untuk meningkatkan
+                    pemahaman materi dan mengembangkan kemampuan
+                    akademik.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- PRESTASI -->
+    <section class="achievement" id="prestasi">
+
+        <div class="section-title">
+            <h2>Prestasi</h2>
+            <p>Pencapaian akademik</p>
+        </div>
+
+        <div class="achievement-box">
+
+            <div class="ranking">
+                #3
+            </div>
+
+            <h3>Ranking 3 Konsisten</h3>
+
+            <p>
+                Memiliki prestasi akademik yang konsisten dengan
+                mempertahankan peringkat 3 hingga kelas 2.
+                Pencapaian ini menjadi motivasi untuk terus belajar
+                dan meningkatkan kemampuan.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- KEAHLIAN -->
+    <section>
+
+        <div class="section-title">
+            <h2>Fokus Pembelajaran</h2>
+            <p>Bidang yang sedang dikembangkan</p>
+        </div>
+
+        <div class="cards">
+
+            <div class="card">
+                <div class="card-icon">💻</div>
+                <h3>Komputer</h3>
+                <p>
+                    Mempelajari dasar-dasar komputer dan
+                    teknologi informasi.
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="card-icon">🌐</div>
+                <h3>Jaringan</h3>
+                <p>
+                    Mempelajari konsep jaringan komputer
+                    dan Teknik Komputer dan Jaringan.
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="card-icon">🚀</div>
+                <h3>Pengembangan Diri</h3>
+                <p>
+                    Terus belajar, mencoba hal baru,
+                    dan mengembangkan kemampuan.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer>
+        <p>
+            © 2026 <span>Zahra Fitria Ramdhani</span> —
+            Modern Oink CV
+        </p>
+    </footer>
+
+</body>
+</html>
